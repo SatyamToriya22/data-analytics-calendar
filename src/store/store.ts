@@ -6,3 +6,5 @@ export const store = configureStore({
     calendar: calendarReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;

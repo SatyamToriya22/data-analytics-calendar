@@ -19,6 +19,8 @@ const initialState: CalendarState = {
     '02-09-2025': [{ user_1: 1 }, { user_2: 2 }, { user_3: 3 }, { user_4: 4 }],
     '03-09-2025': [{ user_1: 1 }, { user_2: 2 }, { user_3: 3 }, { user_4: 4 }],
     '10-09-2025': [{ user_1: 1 }, { user_2: 2 }, { user_3: 3 }, { user_4: 4 }],
+    '11-12-2025': [{ user_1: 1 }, { user_2: 2 }, { user_3: 3 }, { user_4: 4 }],
+    '11-15-2025': [{ user_1: 1 }, { user_2: 2 }, { user_3: 3 }, { user_4: 4 }],
   },
   selectedDate: null,
 };
