@@ -11,6 +11,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './CalendarView.css';
 import { setSelectedDate } from '../store/calendarSlice';
 import { useState } from 'react';
+import { DataDialog } from '../components/DataDialog';
 
 const localizer = momentLocalizer(moment);
 
@@ -24,6 +25,7 @@ interface CalendarEvent {
 const CalendarView = () => {
   const dispatch = useDispatch();
   const calendarData = useSelector((state: RootState) => state.calendar.data);
+  const [dialogOpen, setDialogOpen] = useState(false);
   const [view, setView] = useState<View>(Views.MONTH);
   const [date, setDate] = useState(new Date());
   const events: CalendarEvent[] = Object.keys(calendarData).map((dateStr) => {
@@ -38,6 +40,7 @@ const CalendarView = () => {
 
   const handleSelectEvent = (event: CalendarEvent) => {
     dispatch(setSelectedDate(event.resource));
+    setDialogOpen(true);
   };
 
   const handleSelectSlot = (slot: { start: Date; end: Date }) => {
@@ -45,7 +48,7 @@ const CalendarView = () => {
 
     if (calendarData[dateStr]) {
       dispatch(setSelectedDate(dateStr));
-      //Open dialog
+      setDialogOpen(true);
     } else {
       const alertDateStr = moment(slot.start).format('MMMM DD, YYYY');
       alert(`No data found for the selected date: ${alertDateStr}`);
@@ -77,6 +80,7 @@ const CalendarView = () => {
           style={{ height: '100%' }}
         />
       </div>
+      <DataDialog open={dialogOpen} onClose={() => setDialogOpen(false)} />
     </>
   );
 };
