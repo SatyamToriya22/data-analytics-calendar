@@ -21,7 +21,6 @@ export const DataDialog = ({ open, onClose }: DataDialogProps) => {
     : '';
 
   if (!open) return null;
-  console.log('data-', data);
 
   return (
     <div className='modal-overlay' onClick={onClose}>

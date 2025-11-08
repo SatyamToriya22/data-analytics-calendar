@@ -2,6 +2,46 @@
 
 An interactive React application that combines React Big Calendar with dynamic bar graph visualizations. View and analyze user data across different dates with an intuitive calendar interface.
 
+
+## Installation & Setup
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+This will install all required packages including:
+- React Big Calendar
+- Redux Toolkit
+- Recharts
+- Moment.js
+- All UI dependencies
+
+### 2. Start Development Server
+
+```bash
+npm run dev
+```
+
+The application will start on `http://localhost:5173`
+
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist/` directory.
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+
 ![Data Analytics Calendar](https://img.shields.io/badge/React-18.3.1-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![Redux](https://img.shields.io/badge/Redux_Toolkit-latest-purple)
