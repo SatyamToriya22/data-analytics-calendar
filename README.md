@@ -1,6 +1,10 @@
-# React + TypeScript + Vite
+# Data Analytics Calendar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive React application that combines React Big Calendar with dynamic bar graph visualizations. View and analyze user data across different dates with an intuitive calendar interface.
+
+![Data Analytics Calendar](https://img.shields.io/badge/React-18.3.1-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![Redux](https://img.shields.io/badge/Redux_Toolkit-latest-purple)
 
 Currently, two official plugins are available:
 

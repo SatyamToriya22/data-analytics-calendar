@@ -1,16 +1,20 @@
+import { Provider } from 'react-redux';
+
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CalendarView from './pages/CalendarView';
+import { store } from './store/store';
 
 function App() {
   return (
     <>
-      <div className='data-analytics-calendar'>
-        <h1
-          className='title'
-          style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '8px' }}
-        >
-          Data Analytics Calendar
-        </h1>
-      </div>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<CalendarView />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </>
   );
 }
